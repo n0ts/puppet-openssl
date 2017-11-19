@@ -9,9 +9,12 @@ end
 
 def default_test_facts
   {
-    :boxen_home                  => "/test/boxen",
-    :boxen_user                  => "testuser",
-    :macosx_productversion_major => "10.8",
-    :osfamily                    => "Darwin",
+    :boxen_home    => "/test/boxen",
+    :boxen_user    => "testuser",
+    :boxen_repodir =>  File.join(File.dirname(__FILE__), 'fixtures'),
+    :boxen_repo_url_template => "https://github.com/%s",
+    :boxen_srcdir  => '~/src',
+    :macosx_productversion_major => "10.13",
+    :osfamily      => "Darwin",
   }
 end
